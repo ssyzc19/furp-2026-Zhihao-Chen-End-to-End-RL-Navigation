@@ -34,7 +34,7 @@
 
 **Track:** Track 2 — End-to-End RL Navigation for AMR (Habitat PointNav)
 
-**Attended this week's meeting:** Yes / No
+**Attended this week's meeting:** Yes 
 
 **Progress this week**
 - 选定主方向：Track 2（端到端强化学习导航，Habitat PointNav），并完成 Week 1 环境搭建 + smoke test，已 100% 达标。
