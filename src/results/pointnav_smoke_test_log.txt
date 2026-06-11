@@ -1,0 +1,108 @@
+Windows PowerShell
+版权所有（C） Microsoft Corporation。保留所有权利。
+
+安装最新的 PowerShell，了解新功能和改进！https://aka.ms/PSWindows
+
+PS C:\Users\user> ssh -p 27389 root@connect.westc.seetacloud.com
+root@connect.westc.seetacloud.com's password:
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.4.0-126-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+Last login: Thu Jun 11 10:26:06 2026 from 127.0.0.1
++-----------------------------------------------AutoDL-----------------------------------------------------+
+目录说明:
+╔═════════════════╦════════╦════╦═════════════════════════════════════════════════════════════════════════╗
+║目录             ║名称    ║速度║说明                          ║
+╠═════════════════╬════════╬════╬═════════════════════════════════════════════════════════════════════════╣
+║/                ║系 统 盘║一般║实例关机数据不会丢失，可存放代码等。会随保存镜像一起保存。               ║
+║/root/autodl-tmp ║数 据 盘║ 快 ║实例关机数据不会丢失，可存放读写IO要求高的数据。但不会随保存镜像一起保存 ║
+╚═════════════════╩════════╩════╩═════════════════════════════════════════════════════════════════════════╝
+CPU ：6 核心
+内存：45 GB
+GPU ：NVIDIA RTX A4000, 1
+存储：
+  系 统 盘/               ：19% 5.7G/30G
+  数 据 盘/root/autodl-tmp：1% 1.1M/50G
++----------------------------------------------------------------------------------------------------------+
+*注意:
+1.系统盘较小请将大的数据存放于数据盘或文件存储中，重置系统时数据盘和文件存储中的数据不受影响
+2.清理系统盘请参考：https://www.autodl.com/docs/qa1/
+3.终端中长期执行命令请使用screen等工具开后台运行，确保程序不受SSH连接中断影响：https://www.autodl.com/docs/daemon/
+root@autodl-container-25494b9550-c8bd51ad:~# source ~/miniconda3/etc/profile.d/conda.sh
+root@autodl-container-25494b9550-c8bd51ad:~# conda activate habitat39
+(habitat39) root@autodl-container-25494b9550-c8bd51ad:~# cd ~/habitat-lab
+(habitat39) root@autodl-container-25494b9550-c8bd51ad:~/habitat-lab# python examples/shortest_path_follower_example.py
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+PluginManager::Manager: duplicate static plugin StbImageImporter, ignoring
+PluginManager::Manager: duplicate static plugin GltfImporter, ignoring
+PluginManager::Manager: duplicate static plugin BasisImporter, ignoring
+PluginManager::Manager: duplicate static plugin AssimpImporter, ignoring
+PluginManager::Manager: duplicate static plugin AnySceneImporter, ignoring
+PluginManager::Manager: duplicate static plugin AnyImageImporter, ignoring
+2026-06-11 17:43:31,872 Initializing dataset PointNav-v1
+2026-06-11 17:43:32,277 initializing sim Sim-v0
+PluginManager::Manager: duplicate static plugin StbImageImporter, ignoring
+PluginManager::Manager: duplicate static plugin GltfImporter, ignoring
+PluginManager::Manager: duplicate static plugin BasisImporter, ignoring
+PluginManager::Manager: duplicate static plugin AssimpImporter, ignoring
+PluginManager::Manager: duplicate static plugin AnySceneImporter, ignoring
+PluginManager::Manager: duplicate static plugin AnyImageImporter, ignoring
+Renderer: NVIDIA RTX A4000/PCIe/SSE2 by NVIDIA Corporation
+OpenGL version: 4.6.0 NVIDIA 580.119.02
+Using optional features:
+    GL_ARB_vertex_array_object
+    GL_ARB_separate_shader_objects
+    GL_ARB_robustness
+    GL_ARB_texture_storage
+    GL_ARB_texture_view
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_invalidate_subdata
+    GL_ARB_texture_storage_multisample
+    GL_ARB_multi_bind
+    GL_ARB_direct_state_access
+    GL_ARB_get_texture_sub_image
+    GL_ARB_texture_filter_anisotropic
+    GL_KHR_debug
+    GL_KHR_parallel_shader_compile
+    GL_NV_depth_buffer_float
+Using driver workarounds:
+    no-forward-compatible-core-context
+    nv-egl-incorrect-gl11-function-pointers
+    no-layout-qualifiers-on-old-glsl
+    nv-zero-context-profile-mask
+    nv-implementation-color-read-format-dsa-broken
+    nv-cubemap-inconsistent-compressed-image-size
+    nv-cubemap-broken-full-compressed-image-query
+    nv-compressed-block-size-in-bits
+[17:43:32:572909]:[Warning]:[Metadata] SceneDatasetAttributes.cpp(107)::addNewSceneInstanceToDataset : Dataset : 'default' : Lighting Layout Attributes 'no_lights' specified in Scene Attributes but does not exist in dataset, so creating default.
+[17:43:32:573022]:[Warning]:[Scene] SemanticScene.h(331)::checkFileExists : ::loadSemanticSceneDescriptor: File `data/scene_datasets/habitat-test-scenes/skokloster-castle.scn` does not exist.  Aborting load.
+[17:43:32:573042]:[Warning]:[Scene] SemanticScene.cpp(123)::loadSemanticSceneDescriptor : SSD File Naming Issue! Neither SemanticAttributes-provided name : `data/scene_datasets/habitat-test-scenes/skokloster-castle.scn` nor constructed filename : `data/scene_datasets/habitat-test-scenes/info_semantic.json` exist on disk.
+[17:43:32:573054]:[Error]:[Scene] SemanticScene.cpp(139)::loadSemanticSceneDescriptor : SSD Load Failure! File with SemanticAttributes-provided name `data/scene_datasets/habitat-test-scenes/skokloster-castle.scn` exists but failed to load.
+[17:43:34:356678]:[Warning]:[Sim] Simulator.cpp(595)::instanceStageForSceneAttributes : The active scene does not contain semantic annotations : activeSemanticSceneID_ = 0
+2026-06-11 17:43:35,122 Initializing task Nav-v0
+Environment creation successful
+Agent stepping around inside environment.
+2026-06-11 17:43:58,360 Video created: examples/images/shortest_path_example/00/trajectory.mp4
+  0%|                                                    | 0/77 [00:00<?, ?it/s]IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (599, 256) to (608, 256) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+100%|██████████████████████████████████████████| 77/77 [00:00<00:00, 185.59it/s]
+Episode finished
+Agent stepping around inside environment.
+2026-06-11 17:44:03,666 Video created: examples/images/shortest_path_example/01/trajectory.mp4
+  0%|                                                     | 0/9 [00:00<?, ?it/s]IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (599, 256) to (608, 256) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+100%|████████████████████████████████████████████| 9/9 [00:00<00:00, 122.89it/s]
+Episode finished
+Agent stepping around inside environment.
+2026-06-11 17:44:14,094 Video created: examples/images/shortest_path_example/02/trajectory.mp4
+  0%|                                                    | 0/31 [00:00<?, ?it/s]IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (599, 256) to (608, 256) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+100%|██████████████████████████████████████████| 31/31 [00:00<00:00, 385.28it/s]
+Episode finished
+(habitat39) root@autodl-container-25494b9550-c8bd51ad:~/habitat-lab#
