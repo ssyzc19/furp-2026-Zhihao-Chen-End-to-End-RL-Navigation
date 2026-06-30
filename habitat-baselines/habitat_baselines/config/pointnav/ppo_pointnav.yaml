@@ -54,3 +54,9 @@ habitat_baselines:
       # when environment time is similar or larger than
       # policy inference time during rollout generation
       use_double_buffered_sampler: False
+
+habitat:
+  task:
+    measurements:
+      top_down_map:
+        type: TopDownMap
