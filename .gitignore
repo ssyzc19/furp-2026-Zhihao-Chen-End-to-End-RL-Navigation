@@ -112,6 +112,9 @@ _data_processing_output/
 
 # My training results
 video_dir/
+logs/
+configs_local/
+demo_test.txt
 tb/
 *.pth
 

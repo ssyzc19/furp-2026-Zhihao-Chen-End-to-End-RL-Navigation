@@ -3,7 +3,7 @@
 # Hyperparameters and ResNet18 from on https://arxiv.org/abs/2012.0611
 
 defaults:
-  - /benchmark/nav/pointnav: pointnav_gibson
+  - /benchmark/nav/pointnav: pointnav_habitat_test
   - /habitat_baselines: habitat_baselines_rl_config_base
   - _self_
 
@@ -11,8 +11,8 @@ habitat_baselines:
   verbose: False
   trainer_name: "ppo"
   torch_gpu_id: 0
-  tensorboard_dir: "tb"
-  video_dir: "video_dir"
+  tensorboard_dir: "/root/autodl-tmp/tb"
+  video_dir: "/root/autodl-tmp/video_dir"
   # Evaluate on all episodes
   test_episode_count: -1
   eval_ckpt_path_dir: "/root/autodl-tmp/checkpoints"
@@ -52,7 +52,7 @@ habitat_baselines:
 
       # Use double buffered sampling, typically helps
       # when environment time is similar or larger than
-      # policy inference time during rollout generation
+      # policy inference time d/root/autodl-tmp/uring rollout generation
       use_double_buffered_sampler: False
 
 habitat:
@@ -60,3 +60,8 @@ habitat:
     measurements:
       top_down_map:
         type: TopDownMap
+         
+  simulator:
+    agents_order: ["main_agent"]
+
+
