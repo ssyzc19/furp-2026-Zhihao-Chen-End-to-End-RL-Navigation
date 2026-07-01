@@ -14,7 +14,7 @@ Config: `pointnav/ppo_pointnav_example.yaml` (habitat-test-scenes) · 500k steps
 > 注: seed100 使用 num_checkpoints=10，seed200/300 使用 50（仅存档频率不同，不影响训练）。
 
 
-  # Baseline Failure Analysis
+# Baseline Failure Analysis
 
 > 3-seed PointNav PPO baseline（habitat-test-scenes, val split, 10 episodes/seed）
 > success_distance = 0.2m
@@ -102,3 +102,6 @@ Config: `pointnav/ppo_pointnav_example.yaml` (habitat-test-scenes) · 500k steps
 - 相同 seed 集合（100/200/300）
 - 相同训练步数（500k）
 - baseline 数值：SR 0.867±0.115 / SPL 0.739±0.103 / NE 0.121±0.009m
+
+#TopDownMap measurement 获取带路径的 2D
+俯视图 
