@@ -1,0 +1,21 @@
+# Large binary files excluded from git
+# All checkpoints, datasets, and TensorBoard logs stay on training server
+
+# Checkpoints
+*.pth
+*.pt
+
+# Datasets
+data/
+
+# TensorBoard
+tb/
+events.out.*
+
+# Python
+__pycache__/
+*.pyc
+
+# ROS
+*.log
+logs/
